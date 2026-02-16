@@ -10,13 +10,13 @@ https://github.com/user-attachments/assets/a85ccb75-32e1-4792-83a8-808c15431dbb
 
 ## Team Details
 
-|                 |                         |
-| --------------- | ----------------------- |
-| **Team ID**     | LTVIP2026TMIDS43058     |
-| **Team Leader** | Sujeeth Varma Chamarthi |
-| **Team Member** | Gutlapalli Premchand    |
-| **Team Member** | Charan Teja             |
-| **Team Member** | Divya Sree              |
+|                 |                             |
+| --------------- | --------------------------- |
+| **Team ID**     | LTVIP2026TMIDS83575         |
+| **Team Leader** | Shupta Datta                |
+| **Team Member** | Raja Bangaru                |
+| **Team Member** | Uday Bhaskar Rao Samurothu  |
+| **Team Member** | Yarlagadda Akhil            |
 
 ---
 
@@ -24,11 +24,10 @@ https://github.com/user-attachments/assets/a85ccb75-32e1-4792-83a8-808c15431dbb
 
 ```
 smartinternz/
-├── data/
-│   └── dataset/
+├── Document/
 │       ├── train.csv                        # Training dataset (28,200 rows)
 │       └── test.csv                         # Test dataset (12,087 rows)
-├── Flask-Wind-Mill-Power-Prediction/
+├── Project files/
 │   ├── static/
 │   │   └── style.css                        # Stylesheet for the web app
 │   ├── templates/
