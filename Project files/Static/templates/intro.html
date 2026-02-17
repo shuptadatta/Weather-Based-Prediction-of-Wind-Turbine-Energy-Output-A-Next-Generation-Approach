@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wind Mill Power Prediction</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container intro-page">
+      <div class="hero">
+        <h1>Wind Mill Power Prediction</h1>
+        <p class="subtitle">
+          Predict the energy output of windmills using Machine Learning
+        </p>
+        <div class="features">
+          <div class="feature-card">
+            <h3>🌤️ Weather Forecast</h3>
+            <p>
+              Get real-time weather data for any city using the OpenWeatherMap
+              API
+            </p>
+          </div>
+          <div class="feature-card">
+            <h3>⚡ Power Prediction</h3>
+            <p>
+              Predict wind turbine energy output based on wind speed, motor
+              torque, and rotor torque
+            </p>
+          </div>
+        </div>
+        <a href="/predict" class="btn">Get Started →</a>
+      </div>
+    </div>
+  </body>
+</html>
