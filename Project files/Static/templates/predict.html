@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wind Mill Power Prediction</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <a href="/" class="nav-brand">🌬️ Wind Mill Power Prediction</a>
+      </nav>
+
+      <div class="grid">
+        <!-- Section 1: Weather API -->
+        <div class="card">
+          <h2>🌤️ Weather Forecast</h2>
+          <p>Enter a city name to get current weather conditions</p>
+          <form action="/windapi" method="POST">
+            <div class="form-group">
+              <label for="city">City Name</label>
+              <input
+                type="text"
+                id="city"
+                name="city"
+                placeholder="e.g. London, Mumbai, New York"
+                required
+              />
+            </div>
+            <button type="submit" class="btn">Get Weather</button>
+          </form>
+
+          {% if error %}
+          <div class="results" style="border-color: #ef5350">
+            <p style="color: #ef5350; text-align: center">⚠️ {{ error }}</p>
+          </div>
+          {% endif %} {% if temp %}
+          <div class="results weather-results">
+            <h3>Weather Data</h3>
+            <div class="result-grid">
+              <div class="result-item">
+                <span class="label">🌡️ Temperature</span>
+                <span class="value">{{ temp }}</span>
+              </div>
+              <div class="result-item">
+                <span class="label">💧 Humidity</span>
+                <span class="value">{{ humid }}</span>
+              </div>
+              <div class="result-item">
+                <span class="label">🔽 Pressure</span>
+                <span class="value">{{ pressure }}</span>
+              </div>
+              <div class="result-item">
+                <span class="label">💨 Wind Speed</span>
+                <span class="value">{{ speed }}</span>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+
+        <!-- Section 2: Power Prediction -->
+        <div class="card">
+          <h2>⚡ Energy Prediction</h2>
+          <p>Enter turbine parameters to predict power output</p>
+          <form action="/y_predict" method="POST">
+            <div class="form-group">
+              <label for="windspeed">Wind Speed (m/s)</label>
+              <input
+                type="number"
+                step="any"
+                id="windspeed"
+                name="windspeed"
+                placeholder="e.g. 94.82"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="motortorque">Motor Torque (N-m)</label>
+              <input
+                type="number"
+                step="any"
+                id="motortorque"
+                name="motortorque"
+                placeholder="e.g. 2563.12"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="rotortorque">Rotor Torque (N-m)</label>
+              <input
+                type="number"
+                step="any"
+                id="rotortorque"
+                name="rotortorque"
+                placeholder="e.g. 42.08"
+                required
+              />
+            </div>
+            <button type="submit" class="btn">Predict Power</button>
+          </form>
+
+          {% if prediction_text %}
+          <div class="results prediction-results">
+            <h3>⚡ Prediction Result</h3>
+            <p class="prediction-output">{{ prediction_text }}</p>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
