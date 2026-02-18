@@ -5,7 +5,7 @@ The project aims to predict the energy output of a wind turbine based on weather
 ## Project Demo Video
 
 
-https://github.com/shuptadatta/Weather-Based-Prediction-of-Wind-Turbine-Energy-Output-A-Next-Generation-Approach/blob/main/Demo%20video/project-demo.mp4
+https://youtu.be/T7-DUPd3GiM
 
 
 ## Team Details
