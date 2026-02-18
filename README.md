@@ -5,7 +5,7 @@ The project aims to predict the energy output of a wind turbine based on weather
 ## Project Demo Video
 
 
-https://youtu.be/T7-DUPd3GiM
+https://github.com/user-attachments/assets/a85ccb75-32e1-4792-83a8-808c15431dbb
 
 
 ## Team Details
